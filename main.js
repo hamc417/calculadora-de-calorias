@@ -49,7 +49,7 @@ function calcularCalorias() {
 
     
     if (edad.value<29){
-        grupoPoblacional = "Jovenes";
+        grupoPoblacional = "Jóvenes";
      }else if(edad.value> 30 && edad.value <59){
         grupoPoblacional = "Adultos"
      }else{
@@ -64,13 +64,13 @@ function calcularCalorias() {
 
     resultado.innerHTML = `
         <div class=" card-body d-flex flex-column justify-content-center align-items-center h-100" id="calculo">
-        <p class="card-title h2 text-center color-warning">Paciente ${nombre.value} ${apellido.value} con numero de ${identidad.value} ${numeroIdentidad.value}</p>  
+        <p class="card-title h2 text-center color-warning">Paciente <span class="text-primary">${nombre.value} ${apellido.value}</span> con número de ${identidad.value} <span class="text-primary">${numeroIdentidad.value}</span></p>  
         <p class="card-title h2">Requiere un total de:</p>          
         <div class="mb-3 w-100 d-flex flex-column justify-content-center align-items-center">
             <input class="form-control text-center w-50"  value ="${Math.floor(calculoCalorias)} kcal" style="font-size: 2rem" disable></input>
             <p class="card-title h2 text-center">Para el sostenimiento de su TMB</p>
             <br>
-            <p class="card-title h2 text-center">Paciente pertenece al grupo poblacional de ${grupoPoblacional}</p>
+            <p class="card-title h2 text-center">Paciente pertenece al grupo poblacional de <span class="text-primary">${grupoPoblacional}</span></p>
         </div>
         </div> `      
 
